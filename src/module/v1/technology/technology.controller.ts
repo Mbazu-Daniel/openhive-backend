@@ -1,8 +1,10 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { TechnologyService } from './technology.service';
 import { CreateTechnologyDto, UpdateTechnologyDto } from 'src/module/v1/technology/dto/technology.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 // TODO : make creation and update for admin only
+@ApiTags('technology')
 @Controller('technology')
 export class TechnologyController {
   constructor(private readonly technologyService: TechnologyService) {}

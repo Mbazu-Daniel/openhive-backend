@@ -4,7 +4,9 @@ import { ResponseMessage } from 'src/common/decorators/response.decorator';
 import { Public } from 'src/common/decorators/public.decorator';
 import { ValidateOtpDto } from './dto/otp.dto';
 import { RESPONSE_CONSTANT } from 'src/common/constants/response.constant';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('auth')
 @Controller('otp')
 export class OtpController {
   constructor(private readonly otpService: OtpService) {}

@@ -4,7 +4,9 @@ import { LoggedInUserDecorator } from 'src/common/decorators/logged_in_user.deco
 import { UserDocument } from 'src/module/v1/user/schemas/user.schema';
 import { CrateRatingDto, UpdateRatingDto } from 'src/module/v1/rating/dto/rating.dto';
 import { PaginationDto } from 'src/module/v1/repository/dto/repository.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('rating')
 @Controller('rating')
 export class RatingController {
   constructor(private readonly ratingService: RatingService) {}

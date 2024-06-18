@@ -11,7 +11,9 @@ import {
 } from './dto/auth.dto';
 import { Public } from '../../../common/decorators/public.decorator';
 import { RESPONSE_CONSTANT } from '../../../common/constants/response.constant';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
